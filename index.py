@@ -12,7 +12,7 @@ def fetch_data():
     return df
 
 def filter_empty_skills(df):
-    df = df[df["skills_list"].apply(len) > 0]
+    df = df[df["skills"].apply(len) > 0]
     df.reset_index(drop=True, inplace=True)
     return df
 
@@ -38,6 +38,9 @@ def recommend_users(user_id, df, similarity_matrix, top_n=5):
     except IndexError:
         return f"User ID {user_id} not found in the dataset."
 
+def preprocess_skills(df):
+    df["skills_str"] = df["skills"].astype(str)
+    return df
 
 # Initialize data and similarity matrix at startup
 df = fetch_data()
