@@ -1,16 +1,12 @@
 import numpy as np
 
-
-A = np.array([[2, 1], [3, -1]])  
-b = np.array([5, 4])             
-
-
-solution = np.linalg.solve(A, b)
+m1 = [[1,2], [3,4]]
+m2 = [[5,6], [7,8]]
 
 
-x = solution[0]
-y = solution[1]
+v1 = [1,2,3]
+v2 = [4,5,6]
 
-print(f"Solution:")
-print(f"x = {x}")
-print(f"y = {y}")
+print(np.dot(m1, m2))
+print(np.dot(v1, v2))
+

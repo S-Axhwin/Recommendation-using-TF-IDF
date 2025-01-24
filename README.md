@@ -30,3 +30,8 @@ $[[TF-IDF (Term Frequency-Inverse Document Frequency)]]$ is a statistical measur
 
 $[[Cosine Similarity]]$ is a measure of similarity between two vectors of an inner product space that measures the cosine of the angle between them. It is used to measure how similar two documents are, regardless of their size.
 
+
+## Docs 
+Here are some docs that I found useful while working on this project:
+[GFG tf-idf](https://www.geeksforgeeks.org/understanding-tf-idf-term-frequency-inverse-document-frequency/)
+[medium](https://medium.com/@abhishekjainindore24/tf-idf-in-nlp-term-frequency-inverse-document-frequency-e05b65932f1d)
