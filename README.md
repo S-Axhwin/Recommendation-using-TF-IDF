@@ -5,7 +5,11 @@
 This is a recommendation system that recommends users based on their skills.
 
 ## Usage
-
+1. import the requirement
+```bash
+pip install -r requirement.txt
+```
+2. run the server
 ```bash
 python index.py
 ```

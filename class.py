@@ -1,20 +1,16 @@
 import numpy as np
 
-def scale_vector(vector, scale_factor):
-    vector = np.array(vector)
-    vector = vector * scale_factor
-    return vector
 
-def rotate_vector(vector):
-    vector = np.array(vector)
-    vector = np.rot90(vector)
+A = np.array([[2, 1], [3, -1]])  
+b = np.array([5, 4])             
 
-    return vector
 
-def reflect_vector(vector):
-    vector = np.array(vector)
-    vector = np.flip(vector)
+solution = np.linalg.solve(A, b)
 
-    return vector
 
-print(scale_vector([1,2], 2))
+x = solution[0]
+y = solution[1]
+
+print(f"Solution:")
+print(f"x = {x}")
+print(f"y = {y}")

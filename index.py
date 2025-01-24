@@ -11,18 +11,6 @@ def fetch_data():
     df = pd.read_csv("data.csv")
     return df
 
-
-def preprocess_skills(df):
-    def process(skills):
-        if skills:
-            return [skill.strip().lower() for skill in skills.split(",")]
-        return []
-
-    df["skills_list"] = df["skills"].apply(process)
-    df["skills_str"] = df["skills_list"].apply(lambda x: " ".join(x))
-    return df
-
-
 def filter_empty_skills(df):
     df = df[df["skills_list"].apply(len) > 0]
     df.reset_index(drop=True, inplace=True)
