@@ -48,6 +48,11 @@ df = preprocess_skills(df)
 df = filter_empty_skills(df)
 similarity_matrix = calculate_similarity(df)
 
+
+@app.route('/')
+def index():
+    return "Welcome to the API"
+
 @app.route('/recommend', methods=['GET'])
 def get_recommendations():
     user_id = request.args.get('user_id')
@@ -63,5 +68,3 @@ def get_recommendations():
         "recommended_users": similar_users
     })
 
-if __name__ == "__main__":
-    app.run(debug=True)
