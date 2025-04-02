@@ -68,3 +68,5 @@ def get_recommendations():
         "recommended_users": similar_users
     })
 
+if __name__ == '__main__':
+    app.run(debug=True)

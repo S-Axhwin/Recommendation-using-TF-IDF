@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```
 2. run the server
 ```bash
-python index.py
+python main.py
 ```
 
 ## API
